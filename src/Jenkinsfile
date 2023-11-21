@@ -4,7 +4,7 @@ pipeline {
     tools {
 	 maven 	'maven_3.9.4'
 	 }
-	 Stages {
+	 stages {
 	  stage('code compilation') {
 	    steps {
 		     echo ' code compilation is in progress'
@@ -12,14 +12,14 @@ pipeline {
 			 echo ' Code compilation is completed '
 			 }
 			 }
-			 Stage ('Code QA ') {
+			 stage ('Code QA ') {
 			  steps {
 			          echo ' Code QA i in progress '
 					  sh 'mnvn clean test'
 					  echo 'code QA completed'
 					  }
 					  }
-					  Stage ('Code Package'){
+					  stage ('Code Package'){
 					   steps {
 					   echo ' mvn clean package'
 						echo 'creating war artifact '
