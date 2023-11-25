@@ -8,7 +8,7 @@ pipeline {
 	    steps {
 		     echo ' code compilation is in now progress'
              sh ' mvn clean compile'
-			 echo ' Code compilation is completed '
+			 echo ' Code compilation is now completed '
 			 }
 			 }
 			 Stage ('Code QA ') {
