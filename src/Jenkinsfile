@@ -14,7 +14,7 @@ pipeline {
 			 stage ('Code QA ') {
 			  steps {
 			          echo ' Code QA is in progress '
-					  sh 'mnvn clean test'
+					  sh 'mvn clean test'
 					  echo 'code QA completed'
 					  }
 					  }
