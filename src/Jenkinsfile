@@ -13,7 +13,7 @@ pipeline {
 			 }
 			 stage ('Code QA ') {
 			  steps {
-			          echo ' Code QA is in progresss '
+			          echo ' Code QA is WIP '
 					  sh 'mvn clean test'
 					  echo 'code QA completed'
 					  }
@@ -21,7 +21,7 @@ pipeline {
 					  stage ('Code Package'){
 					   steps {
 					   echo ' mvn clean package'
-						echo 'creating war artifact '
+						echo 'Creating war artifact '
 				}
 		}
 	}
