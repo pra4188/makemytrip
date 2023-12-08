@@ -24,5 +24,21 @@ pipeline {
 						echo 'Creating war artifacts '
 				}
 		}
+
+	stage('Building & Tag Docker Image') {
+                steps {
+                    echo 'Starting Building Docker Image'
+                    sh 'docker build -t pra4188/makemytrip.'
+                    sh 'docker build -t pra4188/makemytrip.'
+                    echo 'Completed  Building Docker Image'
+                }
+            }
+            stage('Docker Image Scanning') {
+                steps {
+                    echo 'Docker Image Scanning Started'
+                    sh 'java -version'
+                    echo 'Docker Image Scanning Started'
+                }
+            }
 	}
 }
