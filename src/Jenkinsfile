@@ -21,7 +21,7 @@ pipeline {
 					  stage ('Code Package'){
 					   steps {
 					   echo ' mvn clean package'
-						echo 'Creating war artifact '
+						echo 'Creating war artifacts '
 				}
 		}
 	}
