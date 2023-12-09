@@ -3,4 +3,4 @@ COPY ./target/makemytrip*.jar /usr/local/tomcat/webapps
 EXPOSE 8080
 USER Makemytrip
 WORKDIR /usr/local/tomcat/webapps
-CMD ["catalina.sh" "run"]
+CMD ["catalina.sh","run"]
