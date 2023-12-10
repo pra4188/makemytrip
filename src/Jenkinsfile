@@ -23,8 +23,9 @@ options {
 					  }
 					  stage ('Code Package'){
 					   steps {
-					   echo ' mvn clean package'
-						echo 'Creating war artifacts '
+					   echo 'Creating war artifacts '
+					   sh ' mvn clean package'
+						echo 'Creating war artifacts done '
 				}
 		}
 		stage('Building & Tag Docker Image') {
