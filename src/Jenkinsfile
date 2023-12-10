@@ -30,8 +30,8 @@ options {
 		stage('Building & Tag Docker Image') {
                     steps {
                         echo 'Starting Building Docker Image'
-                        sh 'docker build -t pra4188/Makemytrip .'
-                        sh 'docker build -t Makemytrip .'
+                        sh 'docker build -t pra4188/makemytrip .'
+                        sh 'docker build -t makemytrip .'
                         echo 'Completed  Building Docker Image'
                     }
                 }
