@@ -48,7 +48,7 @@ options {
                          withCredentials([string(credentialsId: 'dockerhubCred', variable: 'dockerhubCred')]){
                          sh 'docker login docker.io -u pra4188 -p ${dockerhubCred}'
                          echo "Push Docker Image to DockerHub : In Progress"
-                         sh 'docker push pra4188/Makemytrip:latest'
+                         sh 'docker push pra4188/makemytrip:latest'
                          echo "Push Docker Image to DockerHub : In Progress"
                          sh 'whoami'
                          }
