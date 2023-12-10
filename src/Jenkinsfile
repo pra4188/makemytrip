@@ -30,8 +30,8 @@ options {
 		stage('Building & Tag Docker Image') {
                     steps {
                         echo 'Starting Building Docker Image'
-                        sh 'docker build -t pra4188/makemytrip .'
-                        sh 'docker build -t makemytrip .'
+                        sh 'docker build -t pra4188/Makemytrip .'
+                        sh 'docker build -t Makemytrip .'
                         echo 'Completed  Building Docker Image'
                     }
                 }
@@ -48,7 +48,7 @@ options {
                          withCredentials([string(credentialsId: 'dockerhubCred', variable: 'dockerhubCred')]){
                          sh 'docker login docker.io -u pra4188 -p ${dockerhubCred}'
                          echo "Push Docker Image to DockerHub : In Progress"
-                         sh 'docker push pra4188/makemytrip:latest'
+                         sh 'docker push pra4188/Makemytrip:latest'
                          echo "Push Docker Image to DockerHub : In Progress"
                          sh 'whoami'
                          }
