@@ -59,7 +59,7 @@ options {
                 stage(' Docker Image Push to Amazon ECR') {
                    steps {
                       script {
-                         withDockerRegistry([credentialsId:'ecr:ap-south-1:ecr-credentials', url:"https://376585847706.dkr.ecr.ap-south-1.amazonaws.com"]){
+                         withRegistry([credentialsId:'ecr:ap-south-1:ecr-credentials', url:"https://376585847706.dkr.ecr.ap-south-1.amazonaws.com"]){
                          sh """
                          echo "List the docker images present in local"
                          docker images
@@ -67,7 +67,7 @@ options {
                          docker tag makemytrip:latest 376585847706.dkr.ecr.ap-south-1.amazonaws.com/makemytrip:latest
                          echo "Tagging the Docker Image: Completed"
                          echo "Push Docker Image to ECR : In Progress"
-                         docker push 559220132560.dkr.ecr.ap-south-1.amazonaws.com/makemytrip:latest
+                         docker push 376585847706.dkr.ecr.ap-south-1.amazonaws.com/makemytrip:latest
                          echo "Push Docker Image to ECR : Completed"
                          """
                          }
